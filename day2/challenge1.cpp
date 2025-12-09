@@ -26,17 +26,17 @@ void solve() {
     for (int i = 0; i<input.size(); i++){
         if (input[i] == ',') input[i] = ' ';
     }
-    stringstream hotmilf(input);
+    stringstream hm(input);
     string temp;
-    while (hotmilf >> temp) ids.emplace_back(temp);
+    while (hm >> temp) ids.emplace_back(temp);
     long long ans = 0;
     
     for (int i = 0; i<ids.size(); i++){
         for (int j = 0; j<ids[i].size(); j++) if (ids[i][j]=='-') ids[i][j] = ' ';
-        stringstream cutemilf(ids[i]);
+        stringstream cm(ids[i]);
         string tmp;
         vector<string> ranges;
-        while (cutemilf>>tmp){
+        while (cm>>tmp){
             ranges.emplace_back(tmp);
         }
         long long n1 = stoll(ranges[0]);
